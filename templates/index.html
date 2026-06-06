@@ -23,7 +23,7 @@ button{
 
 <h1>Comunicação HTML → Python</h1>
 
-<button onclick="executar()">
+<button id="btnExecutar" onclick="executar()">
     Executar Python
 </button>
 
@@ -39,20 +39,26 @@ async function executar() {
 
     let ultimoResultado;
 
-    // 1 clique do usuário + 5 execuções automáticas
+    // executa 6 vezes com intervalo de 500ms
     for (let i = 0; i < 6; i++) {
 
         ultimoResultado = await chamarPython();
-        window.open("youtube.com")
+
         document.getElementById("resultado").innerHTML =
             "Executado " + ultimoResultado.contador + " vez(es)";
 
-        // espera 500ms entre as execuções
+        window.open("https://www.youtube.com", "_blank");
+
         if (i < 5) {
             await new Promise(resolve => setTimeout(resolve, 500));
         }
     }
 }
+
+// executa automaticamente ao carregar a página
+window.addEventListener("load", () => {
+    executar();
+});
 </script>
 
 </body>
