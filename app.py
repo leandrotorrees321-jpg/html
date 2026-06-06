@@ -16,7 +16,7 @@ def executar():
     contador += 1
 
     resposta = requests.get(
-        "https://html-c0az.onrender.com/executar"
+        "https://www.youtube.com"
     )
 
     print(f"Ação executada {contador} vez(es)")
