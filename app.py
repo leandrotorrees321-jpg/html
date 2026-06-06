@@ -2,6 +2,8 @@ from flask import Flask, render_template, jsonify
 import webbrowser
 import threading
 import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 app = Flask(__name__)
 
@@ -17,6 +19,11 @@ def executar():
 
     contador += 1
     webbrowser.open("https://html-c0az.onrender.com/")
+    driver = webdriver.Chrome()
+    driver.get("https://html-c0az.onrender.com/")
+
+    botao = driver.find_element(By.TAG_NAME, "button")
+    botao.click()
     print(f"Ação executada {contador} vez(es)")
     
     return jsonify({
