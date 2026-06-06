@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensagem</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    background:#222;
+}
+
+.popup{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="popup">
+    <h2>Mensagem</h2>
+    <p>Olá! Página carregada com sucesso.</p>
+    <button onclick="fechar()">OK</button>
+</div>
+
+<script>
+function fechar(){
+    document.querySelector('.popup').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
