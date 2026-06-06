@@ -16,9 +16,9 @@ def executar():
     global contador
 
     contador += 1
-    webbrowser.open("http://127.0.0.1:5000")
+    webbrowser.open("https://html-c0az.onrender.com/")
     print(f"Ação executada {contador} vez(es)")
-
+    
     return jsonify({
         "sucesso": True,
         "contador": contador
