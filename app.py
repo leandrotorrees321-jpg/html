@@ -33,7 +33,7 @@ def executar():
 
 def abrir_navegador():
     time.sleep(1)
-    webbrowser.open("http://127.0.0.1:5000")
+    webbrowser.open("https://html-c0az.onrender.com/")
 
 if __name__ == "__main__":
     threading.Thread(target=abrir_navegador).start()
